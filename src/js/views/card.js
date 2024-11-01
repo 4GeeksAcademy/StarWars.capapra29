@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const Card = ({ id, name, imgURL }) => {
   return (
@@ -8,7 +9,7 @@ const Card = ({ id, name, imgURL }) => {
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
 
-          <a href="#" className="btn btn-primary float-start">More Info</a>
+          <Link to={"/single/"+id} className="btn btn-primary float-start">More Info</Link>
           <button className="btn btn-warning float-end" ><i className="fa fa-heart"></i></button>
         </div>
       </div>
